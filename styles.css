@@ -7,32 +7,41 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff8e1;
+    background-color: #fff5d9;
     color: #333;
     overflow-x: hidden;
-    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #ffbe00;
+    font-size: 2.5rem;
+    padding: 20px 0;
+}
+
+/* Контейнер для элементов */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Шапка */
 header {
-    background-color: #ff6f00;
+    background-color: #f39c12;
     padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2rem;
-    color: white;
 }
 
 /* Основной контент */
-main {
-    padding: 20px 0;
-}
-
 .content {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 30px;
 }
 
 .row {
@@ -40,104 +49,110 @@ main {
     justify-content: space-between;
     margin-bottom: 20px;
     opacity: 0;
-    animation: fadeIn 1s forwards;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-.row:nth-child(odd) {
-    animation-delay: 0.2s;
+.row.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.row:nth-child(even) {
-    animation-delay: 0.4s;
-}
-
+/* Стиль для текста и фото */
 .text {
     flex: 1;
     padding: 20px;
-}
-
-.text p {
     font-size: 1.1rem;
+    color: #333;
     line-height: 1.6;
 }
 
 .photo {
     flex: 1;
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 .photo img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для анимации фото */
 .photo-left {
-    text-align: right;
+    order: 1;
 }
 
 .photo-right {
-    text-align: left;
+    order: 2;
 }
 
-.photo.expanded img {
-    transform: scale(1.1);
+/* Анимации для фото */
+.photo:hover {
+    transform: scale(1.05);
 }
 
-/* Копирайт */
-footer {
-    background-color: #ff6f00;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-/* Анимации */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Плавные переходы для разворачивания фото */
-.photo img {
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.photo.expanded img {
-    opacity: 0.8;
-    transform: scale(1.1);
-}
-
-/* Стили для блоков с несколькими изображениями */
+/* Стиль для дополнительных блоков с контентом */
 .expanded-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: none;
+    background-color: #f39c12;
     padding: 20px;
-    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.expanded-content .expanded-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.expanded-content img {
+    width: 30%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.expanded-content img {
-    width: calc(33.33% - 20px);
-    height: auto;
-    border-radius: 8px;
+.expanded-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    line-height: 1.6;
 }
 
-/* При прокрутке страницы сдвиг элементов */
-body.scrolled .row {
+/* Плавное появление элементов */
+.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Копирайт */
+footer {
+    background-color: #f39c12;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Плавная анимация для появления блоков при прокрутке */
+.row {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Всплывающее окно при активировании */
+.photo.expanded {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+.photo.expanded .expanded-content {
+    display: block;
 }
