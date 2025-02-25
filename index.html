@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Грузовой транспорт</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/icon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -13,51 +12,51 @@
         <h1>Грузовой транспорт</h1>
     </header>
     <div class="container">
-        <div class="section">
+        <div class="section fade-in">
             <h2>Технический транспорт</h2>
             <div class="box-container">
-                <div class="box">
+                <div class="box" onclick="openImage('photo1.jpg')">
                     <img src="photo1.jpg" alt="Фото 1">
                     <p>Описание 1</p>
                 </div>
-                <div class="box">
+                <div class="box" onclick="openImage('photo2.jpg')">
                     <img src="photo2.jpg" alt="Фото 2">
                     <p>Описание 2</p>
                 </div>
-                <div class="box">
+                <div class="box" onclick="openImage('photo3.jpg')">
                     <img src="photo3.jpg" alt="Фото 3">
                     <p>Описание 3</p>
                 </div>
-                <div class="box">
+                <div class="box" onclick="openImage('photo4.jpg')">
                     <img src="photo4.jpg" alt="Фото 4">
                     <p>Описание 4</p>
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section fade-in">
             <h2>Техника безопасности при эксплуатации транспорта</h2>
         </div>
-        <div class="section">
+        <div class="section fade-in">
             <h2>Оборудование</h2>
             <div class="box-container">
-                <div class="box">
+                <div class="box" onclick="openImage('equipment1.jpg')">
                     <img src="equipment1.jpg" alt="Оборудование 1">
                     <p>Оборудование 1</p>
                 </div>
-                <div class="box">
+                <div class="box" onclick="openImage('equipment2.jpg')">
                     <img src="equipment2.jpg" alt="Оборудование 2">
                     <p>Оборудование 2</p>
                 </div>
-                <div class="box">
+                <div class="box" onclick="openImage('equipment3.jpg')">
                     <img src="equipment3.jpg" alt="Оборудование 3">
                     <p>Оборудование 3</p>
                 </div>
             </div>
         </div>
-        <div class="section">
+        <div class="section fade-in">
             <h2>При эксплуатации оборудования техника безопасности</h2>
         </div>
-        <div class="section">
+        <div class="section fade-in">
             <h2>Компетенции</h2>
             <ul>
                 <li>Компетенция 1</li>
@@ -66,5 +65,9 @@
             </ul>
         </div>
     </div>
+    <div id="lightbox" class="lightbox" onclick="closeImage()">
+        <img id="lightbox-img" src="" alt="Увеличенное изображение">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
