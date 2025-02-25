@@ -1,26 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".section");
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("show");
+document.addEventListener("DOMContentLoaded", () => {
+    // Функция для отслеживания прокрутки страницы
+    const revealElements = () => {
+        const elements = document.querySelectorAll('.row');
+        
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
             }
         });
-    }, { threshold: 0.1 });
+    };
 
-    sections.forEach(section => {
-        observer.observe(section);
+    // Отслеживаем прокрутку страницы
+    window.addEventListener('scroll', revealElements);
+
+    // Инициализация появления элементов при загрузке страницы
+    revealElements();
+
+    // Функция для разворачивания и сворачивания фотографий
+    const toggleExpandedContent = (event) => {
+        const photo = event.currentTarget;
+        const expandedContent = photo.querySelector('.expanded-content');
+
+        if (expandedContent) {
+            expandedContent.style.display = expandedContent.style.display === 'block' ? 'none' : 'block';
+            photo.classList.toggle('expanded');
+        }
+    };
+
+    // Находим все фотографии, которые нужно раскрывать
+    const photos = document.querySelectorAll('.photo');
+
+    photos.forEach(photo => {
+        photo.addEventListener('click', toggleExpandedContent);
     });
-
-    window.openImage = function (src) {
-        const lightbox = document.getElementById("lightbox");
-        const lightboxImg = document.getElementById("lightbox-img");
-        lightboxImg.src = src;
-        lightbox.classList.add("show");
-    };
-
-    window.closeImage = function () {
-        const lightbox = document.getElementById("lightbox");
-        lightbox.classList.remove("show");
-    };
 });

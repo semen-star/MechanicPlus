@@ -3,67 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Грузовой транспорт</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Спец. Техника</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="img/icon.png" alt="Логотип" class="logo">
-        <h1>Грузовой транспорт</h1>
+        <div class="container">
+            <h1>Подъёмно-транспортные, строительные и дорожные машины</h1>
+        </div>
     </header>
-    <div class="container">
-        <div class="section fade-in">
-            <h2>Краны</h2>
-            <div class="box-container">
-                <div class="box" onclick="openImage('cars/bascrane.png')">
-                    <img src="cars/bascrane.png" alt="Фото 2">
-                    <p>Башенный кран</p>
+
+    <main>
+        <section class="content">
+
+            <div class="row">
+                <div class="photo photo-left" data-expandable>
+                    <img src="images/crane.png" alt="Кран">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="images/bascrane.png" alt="Дополнительное фото 1">
+                            <img src="images/autocrane.png" alt="Дополнительное фото 2">
+                            <img src="images/guscrane.png" alt="Дополнительное фото 3">
+                            <img src="images/lebntal.jpg" alt="Дополнительное фото 4">
+                        </div>
+                        <h3> Башенные краны</h3>
+
+<p>Башенные краны — это специализированные подъемные механизмы, используемые преимущественно в высотном строительстве. Они представляют собой вертикальную мачту (башню), на которой закреплена стрела с механизмом подъёма груза.</p>
+<h5>Особенности башенных кранов:</h5>
+<p>
+Высокая грузоподъёмность (от нескольких тонн до сотен тонн).
+Возможность работы на больших высотах.
+Устойчивость благодаря креплению к фундаменту или зданию.
+Различные типы стрел (горизонтальные, наклонные, поворотные).</p>
+<h5>Применение:</h5>
+<p>Строительство жилых и коммерческих зданий.
+Возведение мостов и промышленных сооружений.
+Монтаж металлоконструкций. </p>
+
+<hr>
+
+<h3>Автокраны</h3>
+<p>Автокраны представляют собой мобильные краны, установленные на шасси грузовых автомобилей. Благодаря этому они обладают высокой маневренностью и могут быстро перемещаться между стройплощадками.</p>
+<h5>Особенности автокранов:</h5>
+<p>Грузоподъёмность варьируется от 10 до 500 тонн.
+Компактность и мобильность.
+Возможность работы в условиях ограниченного пространства.
+Различные виды стрел: телескопические, решётчатые.</p>
+<h5>Применение:</h5>
+<p>Перемещение строительных материалов.
+Монтаж оборудования.
+Проведение аварийно-спасательных работ.
+Разгрузка и погрузка грузов в логистических центрах.</p>
+
+<hr>
+
+<h3>Гусеничные краны</h3>
+<p>Гусеничные краны — это мощные грузоподъёмные машины, оснащённые гусеничным движителем, что позволяет им работать на сложных грунтах и в условиях бездорожья.</p>
+<h5>Особенности гусеничных кранов:</h5>
+<p>Высокая проходимость благодаря гусеничному ходу.
+Отсутствие необходимости в дополнительной опоре.
+Возможность перемещения с грузом.
+Грузоподъёмность до нескольких сотен тонн.</p>
+<h5>Применение:</h5>
+<p>Строительство мостов, тоннелей, плотин.
+Работы на нефтегазовых месторождениях.
+Подъём и перемещение тяжёлых конструкций в сложных условиях.</p>
+
+<hr>
+
+<h3>Лебёдки и тали</h3>
+<p>Лебёдки и тали — это компактные устройства, предназначенные для подъёма и перемещения грузов на небольшие расстояния. Они широко применяются как вспомогательные механизмы.</p>
+<h5>Особенности:</h5>
+<p>Лебёдки могут быть ручными, электрическими или гидравлическими.
+Тали бывают цепными и канатными.
+Простота конструкции и эксплуатации.
+Грузоподъёмность от нескольких килограммов до десятков тонн.</p>
+<h5>Применение:</h5>
+<p>Подъём грузов на складах и в мастерских.
+Монтажные работы на строительных объектах.
+Использование в производственных цехах.</p>
+
+                    </div>
                 </div>
-                <div class="box" onclick="openImage('cars/guscrane.png')">
-                    <img src="cars/guscrane.png" alt="Фото 3">
-                    <p>Гусеничный кран</p>
-                </div>
-                <div class="box" onclick="openImage('cars/podem.png')">
-                    <img src="cars/podem.png" alt="Фото 4">
-                    <p>Подъёмный кран</p>
+                <div class="text">
+                    <h2>Кран</h2>
+                    <p>Кран — это подъёмно-транспортная машина, предназначенная для вертикального и горизонтального перемещения грузов. Краны широко применяются в строительстве, промышленности, судоходстве, логистике и других сферах, где требуется поднятие и транспортировка тяжёлых объектов. Основные задачи кранов — подъём, перемещение и точное размещение грузов на необходимой высоте и расстоянии.
+
+В зависимости от конструкции и принципа работы краны делятся на несколько видов, включая башенные, автомобильные, гусеничные, а также подъёмные устройства, такие как лебёдки и тали.</p>
                 </div>
             </div>
-        </div>
-        <div class="section fade-in">
-            <h2>Техника безопасности при эксплуатации транспорта</h2>
-        </div>
-        <div class="section fade-in">
-            <h2>Оборудование</h2>
-            <div class="box-container">
-                <div class="box" onclick="openImage('equipment1.jpg')">
-                    <img src="equipment1.jpg" alt="Оборудование 1">
-                    <p>Оборудование 1</p>
+
+            <div class="row">
+                <div class="text">
+                    <h2>Подъёмник</h2>
+                    <p>Дополнительное описание подъёмников.</p>
                 </div>
-                <div class="box" onclick="openImage('equipment2.jpg')">
-                    <img src="equipment2.jpg" alt="Оборудование 2">
-                    <p>Оборудование 2</p>
-                </div>
-                <div class="box" onclick="openImage('equipment3.jpg')">
-                    <img src="equipment3.jpg" alt="Оборудование 3">
-                    <p>Оборудование 3</p>
+                <div class="photo photo-right" data-expandable>
+                    <img src="images/podem.png" alt="Фото 2">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo2-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo2-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo2-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 2. В этой секции рассказывается о новейших моделях техники для строительства дорог.</p>
+                    </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="photo photo-left" data-expandable>
+                    <img src="images/samosval.png" alt="Фото 3">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo3-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo3-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo3-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 3. Информация о других типах строительной техники, её применении в различных областях.</p>
+                    </div>
+                </div>
+                <div class="text">
+                    <h2>Карьерный самосвал</h2>
+                    <p>Дополнительное описание карьерных самосвалов.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text">
+                    <p>Описание к фото 4. Последние технологии.</p>
+                </div>
+                <div class="photo photo-right" data-expandable>
+                    <img src="photo4.jpg" alt="Фото 4">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo4-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo4-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo4-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 4. Секреты правильного выбора техники для крупных инфраструктурных проектов.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text">
+                    <p>Описание к фото 4. Последние технологии.</p>
+                </div>
+                <div class="photo photo-right" data-expandable>
+                    <img src="photo4.jpg" alt="Фото 4">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo4-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo4-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo4-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 4. Секреты правильного выбора техники для крупных инфраструктурных проектов.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text">
+                    <p>Описание к фото 4. Последние технологии.</p>
+                </div>
+                <div class="photo photo-right" data-expandable>
+                    <img src="photo4.jpg" alt="Фото 4">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo4-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo4-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo4-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 4. Секреты правильного выбора техники для крупных инфраструктурных проектов.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text">
+                    <p>Описание к фото 4. Последние технологии.</p>
+                </div>
+                <div class="photo photo-right" data-expandable>
+                    <img src="photo4.jpg" alt="Фото 4">
+                    <div class="expanded-content">
+                        <div class="expanded-images">
+                            <img src="photo4-additional1.jpg" alt="Дополнительное фото 1">
+                            <img src="photo4-additional2.jpg" alt="Дополнительное фото 2">
+                            <img src="photo4-additional3.jpg" alt="Дополнительное фото 3">
+                        </div>
+                        <p>Дополнительное описание для фото 4. Секреты правильного выбора техники для крупных инфраструктурных проектов.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Все права защищены. Спец. Техника.</p>
         </div>
-        <div class="section fade-in">
-            <h2>При эксплуатации оборудования техника безопасности</h2>
-        </div>
-        <div class="section fade-in">
-            <h2>Компетенции</h2>
-            <ul>
-                <li>Компетенция 1</li>
-                <li>Компетенция 2</li>
-                <li>Компетенция 3</li>
-            </ul>
-        </div>
-    </div>
-    <div id="lightbox" class="lightbox" onclick="closeImage()">
-        <img id="lightbox-img" src="" alt="Увеличенное изображение">
-    </div>
-    <script src="script.js"></script>
+    </footer>
 </body>
 </html>
