@@ -81,3 +81,11 @@ header {
 .lightbox.show {
     display: flex;
 }
+
+.description {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }

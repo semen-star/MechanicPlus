@@ -24,3 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
         lightbox.classList.remove("show");
     };
 });
+
+function toggleDescription(element) {
+            var description = element.querySelector('.description');
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+            } else {
+                description.style.display = 'block';
+            }
+        }
