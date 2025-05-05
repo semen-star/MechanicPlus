@@ -21,6 +21,25 @@ header {
 .container {
     padding: 20px;
 }
+.qr-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.qr-item {
+    text-align: center;
+    max-width: 220px;
+}
+
+.qr-item img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
 
 .section {
     background: white;
