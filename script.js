@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
         lightbox.classList.remove("show");
     };
 });
+window.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img:not(.uniform-image)');
+    images.forEach(img => {
+        img.classList.add('uniform-image');
+    });
+});
 
 function toggleDescription(element) {
             var description = element.querySelector('.description');
